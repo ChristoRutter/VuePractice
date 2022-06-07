@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h1 :title = "message">{{sum}}</h1>
+        <input v-model="num" placeholder="Enter Fist Number"/>
+        <input v-model="number" placeholder="Enter Second Number"/>
+        <hr/>
+        <div>
+            <button :title = "addMessage" @click="addNum">Add</button>
+            <button :title = "subMessage" @click="subNum">Subtract</button>
+            <button :title = "divMessage" @click="divNum">Divide</button>
+            <button :title= "multMessage" @click="multNum">Multiply</button>
+        </div>
+    </div>
+</body>
+<script>
+    Vue.createApp({
+        data() {
+            return {
+                sum: 0,
+                num: '',
+                number: '',
+                message: 'This is the output',
+                addMessage: 'Click to add the numbers!',
+                subMessage: 'Click to subtract the numbers!',
+                divMessage: 'CLick to divide the numbers!',
+                multMessage: 'Click to multiply the numbers!'
+            }
+        },
+        methods: {
+            addNum() {
+                this.sum = Number(this.num) + Number(this.number)
+            },
+            subNum() {
+                this.sum = this.num - this.number
+            },
+            divNum() {
+                this.sum = this.num / this.number
+            },
+            multNum() {
+                this.sum = this.num * this.number
+            }
+    }
+    }).mount('#app')
+</script>
+</html>
+
+
+
+
+
+
+
+
