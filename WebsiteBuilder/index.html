@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Website Builder</title>
+</head>
+<body>
+    <div id="app">
+        <div class="main">
+            <div class="content">
+                <h1>{{title}}</h1>
+                <h2>{{subTitle}}</h2>
+                <p>{{para}}</p>
+            </div>
+            
+            <form>
+                <input v-model="title"/>
+                <input v-model="subTitle">
+                <textarea v-model="para"></textarea>
+            </form>
+            
+        </div>
+    </div>
+</body>
+<script>
+    Vue.createApp({
+        data() {
+            return {
+                title: 'Title of Website',
+                subTitle: 'Title of Paragraph',
+                para: 'Informaiton'
+            }
+        },
+        methods: {
+            
+    }
+    }).mount('#app')
+</script>
+</html>
+
+
+
+
+
+
+
+

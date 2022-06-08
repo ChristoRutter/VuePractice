@@ -1,0 +1,14 @@
+.main{
+    display: flex
+}
+.content{
+    flex: 75%;
+    text-align: center;
+}
+form{
+    flex: 25%;
+}
+form input{
+    display: block;
+    margin: 5%;
+}
